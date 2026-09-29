@@ -1,8 +1,8 @@
 class Politica:
     """
-    Classe base das regras configuráveis do hotel[cite: 1].
+    Classe base das regras configuráveis do hotel.
 
-    Guarda uma descrição e se a regra está ativa[cite: 1].
+    Guarda uma descrição e se a regra está ativa.
     """
     pass
 
@@ -10,14 +10,14 @@ class Politica:
 class Politica_de_cancelamento(Politica):
     """
     Calcula a multa de cancelamento, conforme a antecedência 
-    e o percentual configurados[cite: 1].
+    e o percentual configurados.
     """
     pass
 
 
 class Politica_de_adesao(Politica):
     """
-    Representa o termo que o hóspede confirma antes de fechar a reserva[cite: 1].
+    Representa o termo que o hóspede confirma antes de fechar a reserva.
     """
     pass
 
