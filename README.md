@@ -37,4 +37,4 @@ Aplicar os pilares de Programação Orientada a Objetos — encapsulamento, hera
 
 O UML textual completo (classes, atributos, métodos e relacionamentos), incluindo um diagrama Mermaid renderizado automaticamente pelo GitHub, está em [`diagramas/uml-textual.md`](diagramas/UML.md).
 
-A versão editável do diagrama, feita no Excalidraw, está em [`diagramas/diagrama.excalidraw`](diagramas/diagrama.excalidraw) — pode ser aberta em [excalidraw.com](https://excalidraw.com) (menu → Open) para visualização ou edição.
+A versão editável do diagrama, feita no Excalidraw, está em [`diagramas/diagrama.excalidraw`](diagramas/UML.excalidraw) — pode ser aberta em [excalidraw.com](https://excalidraw.com) (menu → Open) para visualização ou edição.
