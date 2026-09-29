@@ -32,14 +32,9 @@ Aplicar os pilares de Programação Orientada a Objetos — encapsulamento, hera
 | `Adicional` | Guarda nome e valor de um item extra lançado numa reserva. |
 | `Controle` | Verifica a disponibilidade de um quarto num intervalo de datas, evitando reservas sobrepostas (overbooking). |
 | `calculos` *(módulo)* | Funções puras que calculam o valor de uma diária, considerando os multiplicadores de temporada e fim de semana. |
-| `dados` *(módulo, planejado para a Semana 3)* | Funções de persistência, para salvar e carregar quartos, hóspedes, reservas e pagamentos em JSON. |
 
 ## Diagrama de classes
 
-O UML textual completo (classes, atributos, métodos e relacionamentos), incluindo um diagrama Mermaid renderizado automaticamente pelo GitHub, está em [`uml-textual.md`](uml-textual.md).
+O UML textual completo (classes, atributos, métodos e relacionamentos), incluindo um diagrama Mermaid renderizado automaticamente pelo GitHub, está em [`diagramas/uml-textual.md`](diagramas/uml-textual.md).
 
-A versão editável do diagrama, feita no Excalidraw, está em [`diagrama.excalidraw`](diagrama.excalidraw) — pode ser aberta em [excalidraw.com](https://excalidraw.com) (menu → Open) para visualização ou edição.
-
-## Status
-
-Projeto em desenvolvimento. Entrega da Semana 1: UML textual, README inicial e esqueleto de classes.
+A versão editável do diagrama, feita no Excalidraw, está em [`diagramas/diagrama.excalidraw`](diagramas/diagrama.excalidraw) — pode ser aberta em [excalidraw.com](https://excalidraw.com) (menu → Open) para visualização ou edição.
