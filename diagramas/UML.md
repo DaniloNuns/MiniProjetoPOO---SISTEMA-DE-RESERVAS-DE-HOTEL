@@ -11,7 +11,7 @@
 +esta_ativa()
 ```
 
-### Politica_de_cancelamento (herda de Politica)
+### PoliticaDeCancelamento (herda de Politica)
 ```text
 -Multa
 -TempoLimite
@@ -20,7 +20,7 @@
 +calcular_multa(data_hora_cancelamento, data_hora_entrada, valor_reserva)
 ```
 
-### Politica_de_adesao (herda de Politica)
+### PoliticaDeAdesao (herda de Politica)
 ```text
 -texto_termo
 -versao
@@ -46,17 +46,17 @@
 +__lt__(outro_quarto)
 ```
 
-### Quarto_simples (herda de Quarto)
+### QuartoSimples (herda de Quarto)
 ```text
 (sem atributos ou métodos próprios — herda tudo de Quarto)
 ```
 
-### Quarto_duplo (herda de Quarto)
+### QuartoDuplo (herda de Quarto)
 ```text
 (sem atributos ou métodos próprios — herda tudo de Quarto)
 ```
 
-### Quarto_Luxo (herda de Quarto)
+### QuartoLuxo (herda de Quarto)
 ```text
 -ServicosInclusos
 -TaxaServico
@@ -201,8 +201,6 @@
 
 ## Diagrama (Mermaid)
 
-O GitHub renderiza este bloco automaticamente como um diagrama visual, com as setas de cada relacionamento.
-
 ```mermaid
 classDiagram
     class Politica {
@@ -210,13 +208,13 @@ classDiagram
         -ativa
         +esta_ativa()
     }
-    class Politica_de_cancelamento {
+    class PoliticaDeCancelamento {
         -Multa
         -TempoLimite
         -PrazoLimite
         +calcular_multa(data_hora_cancelamento, data_hora_entrada, valor_reserva)
     }
-    class Politica_de_adesao {
+    class PoliticaDeAdesao {
         -texto_termo
         -versao
         -obrigatorio
@@ -237,9 +235,9 @@ classDiagram
         +__str__()
         +__lt__(outro_quarto)
     }
-    class Quarto_simples
-    class Quarto_duplo
-    class Quarto_Luxo {
+    class QuartoSimples
+    class QuartoDuplo
+    class QuartoLuxo {
         -ServicosInclusos
         -TaxaServico
         +calcular_tarifa()
@@ -323,11 +321,11 @@ classDiagram
         +calcular_multiplicador_temporada(data, temporadas)
     }
 
-    Politica_de_cancelamento --|> Politica
-    Politica_de_adesao --|> Politica
-    Quarto_simples --|> Quarto
-    Quarto_duplo --|> Quarto
-    Quarto_Luxo --|> Quarto
+    PoliticaDeCancelamento --|> Politica
+    PoliticaDeAdesao --|> Politica
+    QuartoSimples --|> Quarto
+    QuartoDuplo --|> Quarto
+    QuartoLuxo --|> Quarto
     Hospede --|> Pessoa
     Funcionario --|> Pessoa
     Funcionario --|> Auditavel
@@ -341,7 +339,7 @@ classDiagram
     Reserva *-- Pagamento : composição
     Reserva *-- Adicional : composição
 
-    Reserva ..> Politica_de_cancelamento : usa
-    Reserva ..> Politica_de_adesao : usa
+    Reserva ..> PoliticaDeCancelamento : usa
+    Reserva ..> PoliticaDeAdesao : usa
     Reserva ..> calculos : usa
 ```
