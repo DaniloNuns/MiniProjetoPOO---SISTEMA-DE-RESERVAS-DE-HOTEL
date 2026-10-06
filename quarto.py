@@ -43,9 +43,9 @@ class Quarto:
     
     def atualizar_status(self, novo_status):
         status_validos = [
-            "DISPONIVEL"
-            "OCUPADO"
-            "MANUTENÇÃO"
+            "DISPONIVEL",
+            "OCUPADO",
+            "MANUTENÇÃO",
             "BLOQUEADO"
         ]
 
@@ -62,14 +62,14 @@ class Quarto:
     def desbloquear(self):
         self.motivo_bloqueio = None
         self.periodo_bloqueio = None
-        self.atualizar_status = ("DISPONIVEL")
+        self.atualizar_status("DISPONIVEL")
 
     def __str__(self):
         return (
             f"Quarto {self.numero} - "
             f"Capacidade {self.capacidade} - "
             f"Tarifa: R$ {self.tarifa:.2f} - "
-            f"Status: {self.status} - "
+            f"Status: {self.status}"
         )
 
     def __lt__(self, outro_quarto):
