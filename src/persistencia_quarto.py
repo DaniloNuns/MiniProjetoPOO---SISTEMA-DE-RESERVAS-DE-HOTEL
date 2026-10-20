@@ -1,8 +1,11 @@
-"""Persistência simples de Quarto em arquivo JSON (json.dump / json.load)."""
-
 import json
 
-from quarto import Quarto, QuartoSimples, QuartoDuplo, QuartoLuxo
+"""Persistência simples de Quarto em arquivo JSON (json.dump / json.load)."""
+
+from quarto import Quarto
+from quarto_simples import QuartoSimples
+from quarto_duplo import QuartoDuplo
+from quarto_luxo import QuartoLuxo
 
 CLASSES_QUARTO = {
     "Quarto": Quarto,

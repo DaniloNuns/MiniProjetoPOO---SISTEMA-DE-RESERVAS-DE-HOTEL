@@ -1,8 +1,5 @@
 from quarto import Quarto
 
 
-class Quarto_duplo(Quarto):
-    """
-    Sem atributos ou métodos próprios — herda tudo de Quarto.
-    """
-    pass
+class QuartoDuplo(Quarto):
+    """Quarto duplo. Sem atributos ou regras próprias — herda tudo de Quarto."""
