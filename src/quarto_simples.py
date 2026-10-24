@@ -2,4 +2,4 @@ from quarto import Quarto
 
 
 class QuartoSimples(Quarto):
-    """Quarto simples. Sem atributos ou regras próprias — herda tudo de Quarto."""
+    """Sem atributos ou métodos próprios — herda tudo de Quarto."""
