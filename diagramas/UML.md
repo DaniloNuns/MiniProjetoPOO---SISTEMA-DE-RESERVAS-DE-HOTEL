@@ -1,4 +1,4 @@
-[uml-textual(3).md](https://github.com/user-attachments/files/32778713/uml-textual.3.md)
+[uml-textual.md](https://github.com/user-attachments/files/32778713/uml-textual.3.md)
 # Sistema de Reservas de Hotel — UML Textual
 
 ## Classes

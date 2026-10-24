@@ -29,7 +29,7 @@ Aplicar os pilares de Programação Orientada a Objetos — encapsulamento, hera
 | `Auditavel` | Guarda um histórico de ações realizadas no sistema. |
 | `Funcionario` *(herda de `Pessoa` e `Auditavel` — herança múltipla)* | Guarda cargo e matrícula. Herda de duas classes ao mesmo tempo, cobrindo o requisito de herança múltipla do projeto. |
 | `Pagamento` | Guarda valor, data e forma de pagamento de uma reserva. |
-| `Adicional` | Guarda nome e valor de um item extra lançado numa reserva. |
+| `Adicional` | Representa um adicional oferecido pelo hotel. |
 | `Controle` | Verifica a disponibilidade de um quarto num intervalo de datas, evitando reservas sobrepostas (overbooking). |
 | `calculos` *(módulo)* | Funções puras que calculam o valor de uma diária, considerando os multiplicadores de temporada e fim de semana. |
 
