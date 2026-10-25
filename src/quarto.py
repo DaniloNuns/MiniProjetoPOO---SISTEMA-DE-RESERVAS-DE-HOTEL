@@ -34,8 +34,11 @@ class Quarto:
 
     @tarifa.setter
     def tarifa(self, valor):
+        if not isinstance(valor, (int, float)) or isinstance(valor, bool):
+            raise ValueError("A tarifa deve ser númerica.")
+
         if valor <= 0:
-            raise ValueError("A tarifa deve ser maior que 0.")
+            raise ValueError("A tarifa deve ser maior que zero.")
 
         self._tarifa = valor
 
