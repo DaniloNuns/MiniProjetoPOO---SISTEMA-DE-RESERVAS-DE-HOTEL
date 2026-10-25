@@ -108,7 +108,7 @@
 ```text
 -Nome
 -TipoDocumento
--Documento
+-NumeroDocumento
 -Email
 -Telefone
 --------------------
@@ -282,7 +282,8 @@ classDiagram
 
     class Pessoa {
         -Nome
-        -Documento
+        -TipoDocumento
+        -NumeroDocumento
         -Email
         -Telefone
         +atualizar_contato(email, telefone)
