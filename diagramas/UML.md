@@ -107,6 +107,7 @@
 ### Pessoa
 ```text
 -Nome
+-TipoDocumento
 -Documento
 -Email
 -Telefone
