@@ -11,11 +11,17 @@ class QuartoLuxo(Quarto):
     }
 
 
-    def __init__(self, capacidade, numero, tarifa, servicos_inclusos=None,
-                 taxa_servico=10.00, status="DISPONIVEL"):
+    def __init__(
+        self, 
+        capacidade, 
+        numero, 
+        tarifa,
+        taxa_servico=10.00, 
+        status="DISPONIVEL"
+    ):
         super().__init__(capacidade, numero, tarifa, status)
         
-        self.servicos_inclusos = []
+        self._servicos_inclusos = []
         self.taxa_servico = taxa_servico
 
     @property
