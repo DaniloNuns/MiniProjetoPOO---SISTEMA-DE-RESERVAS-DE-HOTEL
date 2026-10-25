@@ -1,3 +1,5 @@
+from datetime import date, datetime
+
 class Reserva:
     """
     Liga um Hospede a um Quarto.
@@ -27,10 +29,11 @@ class Reserva:
 
     @data_entrada.setter
     def data_entrada(self, valor):
+        if not isinstance(valor, date) or isinstance (valor, datetime):
+            raise ValueError ("A data de entrada deve ser uma data válida.")
+            
         if hasattr(self, "_data_saida") and valor >= self._data_saida:
-            raise ValueError (
-                "A data de entrada deve ser anterior à data de saída."
-            )
+            raise ValueError ("A data de entrada deve ser anterior à data de saída.")
 
         self._data_entrada = valor
     
@@ -40,10 +43,11 @@ class Reserva:
     
     @data_saida.setter
     def data_saida(self, valor):
+        if not isinstance(valor, date) or isinstance(valor, datetime):
+            raise ValueError ("A data de saída deve ser uma data válida.")
+            
         if hasattr(self, "_data_entrada") and valor <= self._data_entrada:
-            raise ValueError (
-                "A data de saída deve ser posterior à data de entrada."
-            )
+            raise ValueError ("A data de saída deve ser posterior à data de entrada.")
         
         self._data_saida = valor
 
