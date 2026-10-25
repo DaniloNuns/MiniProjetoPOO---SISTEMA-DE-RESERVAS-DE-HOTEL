@@ -1,5 +1,6 @@
 from datetime import date, datetime
 
+
 class Reserva:
     """
     Liga um Hospede a um Quarto.
@@ -7,14 +8,16 @@ class Reserva:
     Guarda as datas, o número de hóspedes, a origem, o status e
     as ações do ciclo de vida da reserva, agregando Pagamento e Adicional.
     """
+
     def __init__(self, hospede, quarto, data_entrada, data_saida, numero_hospedes, origem):
+        # Inicializa os dados da reserva e suas listas de pagamentos e adicionais.
         self.hospede = hospede
         self.quarto = quarto
 
         self.data_entrada = data_entrada
         self.data_saida = data_saida
         self.numero_hospedes = numero_hospedes
-        
+
         self.origem = origem
 
         self.pagamentos = []
@@ -29,45 +32,52 @@ class Reserva:
 
     @data_entrada.setter
     def data_entrada(self, valor):
-        if not isinstance(valor, date) or isinstance (valor, datetime):
-            raise ValueError ("A data de entrada deve ser uma data válida.")
-            
+        # Verifica se o valor recebido é uma data válida.
+        if not isinstance(valor, date) or isinstance(valor, datetime):
+            raise ValueError("A data de entrada deve ser uma data válida.")
+
+        # Impede que a entrada seja posterior ou igual à saída.
         if hasattr(self, "_data_saida") and valor >= self._data_saida:
-            raise ValueError ("A data de entrada deve ser anterior à data de saída.")
+            raise ValueError("A data de entrada deve ser anterior à data de saída.")
 
         self._data_entrada = valor
-    
+
     @property
     def data_saida(self):
         return self._data_saida
-    
+
     @data_saida.setter
     def data_saida(self, valor):
+        # Verifica se o valor recebido é uma data válida.
         if not isinstance(valor, date) or isinstance(valor, datetime):
-            raise ValueError ("A data de saída deve ser uma data válida.")
-            
+            raise ValueError("A data de saída deve ser uma data válida.")
+
+        # Impede que a saída seja anterior ou igual à entrada.
         if hasattr(self, "_data_entrada") and valor <= self._data_entrada:
-            raise ValueError ("A data de saída deve ser posterior à data de entrada.")
-        
+            raise ValueError("A data de saída deve ser posterior à data de entrada.")
+
         self._data_saida = valor
 
     @property
     def numero_hospedes(self):
         return self._numero_hospedes
-    
+
     @numero_hospedes.setter
     def numero_hospedes(self, valor):
-        if not isinstance(valor, int) or valor < 1:
-            raise ValueError (
+        # Exige um número inteiro positivo, sem aceitar valores booleanos.
+        if not isinstance(valor, int) or isinstance(valor, bool) or valor < 1:
+            raise ValueError(
                 "O número de hóspedes deve ser um inteiro maior ou iugal a 1."
             )
 
+        # Impede que a quantidade de hóspedes exceda a capacidade do quarto.
         if valor > self.quarto.capacidade:
             raise ValueError(
                 "O número de hóspedes não pode exceder a capacidade do quarto."
             )
-        
+
         self._numero_hospedes = valor
-    
-    def __len__ (self):
+
+    def __len__(self):
+        # Retorna a quantidade de diárias da reserva.
         return (self.data_saida - self.data_entrada).days
