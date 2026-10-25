@@ -3,6 +3,7 @@ class Adicional:
     Representa um adicional oferecido pelo hotel.
     """
 
+    # Define os adicionais disponíveis e seus preços fixos.
     PRECOS = {
         "CAFE_DA_MANHA": 30.00,
         "LANCHE_DA_TARDE": 30.00,
@@ -10,6 +11,7 @@ class Adicional:
     }
 
     def __init__(self, nome):
+        # Define o nome e o preço correspondente ao adicional.
         self.nome = nome
 
     @property
@@ -18,9 +20,10 @@ class Adicional:
 
     @nome.setter
     def nome(self, valor):
-        if valor not in self.PRECOS:
-            raise ValueError("Adicional inválido")
-        
+        # Verifica se o nome é válido e está cadastrado no catálogo.
+        if not isinstance(valor, str) or valor not in self.PRECOS:
+            raise ValueError("Adicional inválido.")
+
         self._nome = valor
         self._valor = self.PRECOS[valor]
 
@@ -29,8 +32,5 @@ class Adicional:
         return self._valor
 
     def __str__(self):
+        # Retorna o nome do adicional acompanhado de seu preço.
         return f"{self.nome}: R$ {self.valor:.2f}"
-
-
-
-
