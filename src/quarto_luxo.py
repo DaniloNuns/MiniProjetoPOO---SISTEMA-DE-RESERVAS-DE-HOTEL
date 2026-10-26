@@ -8,11 +8,11 @@ class QuartoLuxo(Quarto):
     """
 
     # Define os serviços que podem ser incluídos no quarto de luxo.
-    SERVICOS_DISPONIVEIS = {
+    SERVICOS_DISPONIVEIS = (
         "HIDROMASSAGEM",
         "SERVICO_DE_QUARTO_VIP",
         "CAFETEIRA",
-    }
+    )
 
     def __init__(
         self,
