@@ -3,7 +3,7 @@ class Auditavel:
     Guarda um histórico de ações realizadas no sistema.
     """
 
-    def __init_(self):
+    def __init__(self):
         #Inicializa o histórico privado de ações.
         self._historico_acoes = []
     
@@ -18,7 +18,7 @@ class Auditavel:
             raise ValueError("A descrição da ação não pode ser vazia.")
 
         #Registra a ação no histórico
-        self._historico_acoes_append(descricao.strip())
+        self._historico_acoes.append(descricao.strip())
     
     def listar_historico(self):
         #Retorna uma cópia do histórico de ações.
