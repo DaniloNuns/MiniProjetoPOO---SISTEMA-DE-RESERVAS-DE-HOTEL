@@ -12,10 +12,13 @@ class Funcionario(Pessoa, Auditavel):
 
     def __init__(self, nome, tipo_documento, numero_documento, email, telefone, cargo, matricula):
 
+        #Inicializa os dados herdados da classe Pessoa.
         Pessoa.__init__(self, nome, tipo_documento, numero_documento, email, telefone)
 
+        #Inicia o histórico herdade da classe Auditavel.
         Auditavel.__init__(self)
 
+        #Inicia os atributos próprios de Funcionário.
         self.cargo = cargo
         self.matricula = matricula
     
